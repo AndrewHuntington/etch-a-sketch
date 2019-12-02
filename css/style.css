@@ -8,7 +8,17 @@ body {
   height: 100vh;
   display: grid;
   grid-template-columns: 638px 640px 638px;
-  grid-template-areas: ". etch-a-sketch .";
+  grid-template-rows: 10% 90%;
+  grid-template-areas:
+    ". button-area ."
+    ". etch-a-sketch .";
+}
+
+#reset {
+  grid-area: button-area;
+  justify-self: center;
+  align-self: center;
+  height: 50px;
 }
 
 .etch-a-sketch {
@@ -35,7 +45,7 @@ body {
   grid-area: etch-a-sketch;
   width: 100%;
   height: 640px;
-  margin-top: 25px;
+  margin-top: 15px;
   background-color: gray;
   border: 2px solid black;
 }

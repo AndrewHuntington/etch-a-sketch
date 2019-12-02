@@ -12,7 +12,19 @@ for (var i = 1; i <= 16; i++) {
 
 const canvasDivs = document.querySelectorAll(".etch-a-sketch > div");
 canvasDivs.forEach((canvasDiv) => {
-  canvasDiv.addEventListener('mouseover', (e) => {
+  canvasDiv.addEventListener('mouseover', () => {
     canvasDiv.classList.add('black');
   });
+});
+
+const btn = document.querySelector("#reset");
+btn.addEventListener('click', (e) => {
+  let result = window.confirm('Clear the canvas?');
+  if (result) {
+    canvasDivs.forEach((canvasDiv) => {
+      canvasDiv.classList.remove('black');
+    });
+  } else {
+    return;
+  }
 });
