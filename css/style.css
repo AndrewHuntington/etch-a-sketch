@@ -1,17 +1,33 @@
 body {
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-x: scroll;
+  overflow-y: scroll;
   font-size: 0.5em;
+  background-color: rgb(25, 122, 96);
 }
 
+
 .container {
-  height: 100vh;
+  height: 85vh;
   display: grid;
-  grid-template-columns: 638px 640px 638px;
-  grid-template-rows: 10% 90%;
+  /* 638px */
+  grid-template-columns: auto 640px auto;
+  grid-template-rows: auto 10% 82%;
   grid-template-areas:
+    ". title ."
     ". button-area ."
     ". etch-a-sketch .";
+}
+
+
+#title {
+  margin-top: 5px;
+  margin-bottom: 0px;
+  grid-area: title;
+  font-family: 'Great Vibes', cursive;
+  font-style: italic;
+  justify-self: center;
+  font-size: 3rem;
+  color: rgba(10, 45, 35, 0.97);
 }
 
 #reset {
@@ -19,6 +35,14 @@ body {
   justify-self: center;
   align-self: center;
   height: 50px;
+  background-color: transparent;
+  border-color: blue;
+  border-radius: 5px;
+  color: blue;
+}
+
+#reset:hover {
+  background-color: rgb(6, 173, 163);
 }
 
 .etch-a-sketch {
@@ -26,6 +50,7 @@ body {
   grid-area: etch-a-sketch;
   width: 100%;
   height: 640px;
-  margin-top: 15px;
+  margin-top: 10px;
   border: 2px solid black;
+  background-color: white;
 }
