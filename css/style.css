@@ -27,10 +27,5 @@ body {
   width: 100%;
   height: 640px;
   margin-top: 15px;
-  background-color: gray;
   border: 2px solid black;
-}
-
-.black {
-  background-color: black;
 }
